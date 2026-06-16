@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bom Dia, Gaby ❤️</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+background:linear-gradient(180deg,#0f0f0f,#1a0d12,#2b1018);
+color:white;
+text-align:center;
+overflow-x:hidden;
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:30px;
+}
+
+h1{
+font-size:3rem;
+color:#ff6b9d;
+margin-bottom:15px;
+}
+
+.sub{
+font-size:1.2rem;
+max-width:700px;
+line-height:1.8;
+opacity:.9;
+}
+
+button{
+margin-top:30px;
+padding:15px 35px;
+border:none;
+border-radius:30px;
+background:#ff6b9d;
+color:white;
+font-size:18px;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.08);
+}
+
+.mensagem{
+display:none;
+max-width:900px;
+margin:40px auto;
+padding:30px;
+background:rgba(255,255,255,0.05);
+border-radius:20px;
+line-height:2;
+font-size:18px;
+}
+
+footer{
+margin-top:50px;
+padding:30px;
+color:#aaa;
+}
+
+.cora{
+position:fixed;
+color:#ff6b9d;
+font-size:20px;
+animation:subir 6s linear infinite;
+}
+
+@keyframes subir{
+0%{
+transform:translateY(100vh);
+opacity:0;
+}
+20%{
+opacity:1;
+}
+100%{
+transform:translateY(-100px);
+opacity:0;
+}
+}
+
+</style>
+</head>
+<body>
+
+<section class="hero">
+
+<h1>Bom Dia, Gaby ❤️</h1>
+
+<p class="sub">
+Tem uma coisa que eu precisava te dizer...
+Mesmo quando o dia começa, a primeira pessoa que vem na minha mente é você.
+</p>
+
+<button onclick="abrirMensagem()">
+💌 Clique Aqui
+</button>
+
+</section>
+
+<div class="mensagem" id="texto">
+
+<h2>Para Você, Gaby ❤️</h2>
+
+<br>
+
+<p>
+Bom dia, meu amor.
+</p>
+
+<p>
+Eu já estou morrendo de saudades de você.
+É estranho como os dias passam, mas a falta que você faz continua exatamente a mesma.
+Durante a semana, nos finais de semana, de manhã, de tarde ou de noite, sempre existe alguma coisa me lembrando você.
+</p>
+
+<p>
+Às vezes eu vou jogar alguma coisa para distrair a cabeça, mas a verdade é que todos os jogos ficaram sem graça sem você.
+Aquilo que antes era divertido, hoje parece incompleto.
+Porque a melhor parte nunca foi o jogo...
+Sempre foi ter você comigo.
+</p>
+
+<p>
+Sua presença virou parte dos meus dias.
+Seu jeito, sua voz, suas mensagens e até as nossas conversas mais simples fazem falta.
+E cada momento sem você parece mais longo do que deveria.
+</p>
+
+<p>
+Quero que você saiba que eu estou com você independente de tudo.
+Independente dos problemas, dos dias difíceis, da ansiedade, das preocupações ou das fases complicadas.
+Eu vou continuar aqui.
+Porque você é importante para mim.
+</p>
+
+<p>
+E também quero te pedir desculpas.
+Desculpa pelas vezes que eu insisto demais.
+Desculpa pelas fotos que às vezes eu fico pedindo.
+Desculpa quando eu acabo sendo chato sem perceber.
+Desculpa pelas vezes que eu tento te deixar melhor e não consigo.
+Nunca foi minha intenção te incomodar.
+</p>
+
+<p>
+Eu só queria que você soubesse o quanto eu me importo.
+O quanto eu me preocupo.
+O quanto eu gosto de te ver sorrindo.
+Porque ver você feliz sempre foi uma das coisas que mais me deixa feliz também.
+</p>
+
+<p>
+Viver sem a sua presença já não parece a mesma coisa.
+Você se tornou uma parte muito especial da minha vida.
+E mesmo que eu não demonstre da melhor forma às vezes, meu carinho por você é verdadeiro.
+</p>
+
+<p>
+Obrigado por existir.
+Obrigado por ser você.
+E obrigado por todos os momentos que já vivemos juntos.
+</p>
+
+<p>
+Eu sinto sua falta.
+Muito mais do que consigo explicar em palavras.
+❤️
+</p>
+
+<br>
+
+<h2>Rafihx te ama muito ❤️</h2>
+
+</div>
+
+<footer>
+Feito com todo carinho para você, Gaby ❤️
+</footer>
+
+<script>
+
+function abrirMensagem(){
+document.getElementById("texto").style.display="block";
+window.scrollTo({
+top:document.body.scrollHeight,
+behavior:"smooth"
+});
+}
+
+function criarCoracao(){
+const coracao=document.createElement("div");
+coracao.classList.add("cora");
+coracao.innerHTML="❤️";
+coracao.style.left=Math.random()*100+"vw";
+coracao.style.fontSize=(Math.random()*20+15)+"px";
+
+document.body.appendChild(coracao);
+
+setTimeout(()=>{
+coracao.remove();
+},6000);
+}
+
+setInterval(criarCoracao,500);
+
+</script>
+
+</body>
+</html>
